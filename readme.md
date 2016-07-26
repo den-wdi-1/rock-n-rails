@@ -329,7 +329,7 @@ In `config/routes.rb`, replace
 with the following route(s):
 
 ```ruby
-  resources :records, expect: [:delete, :edit, :update]
+  resources :records, except: [:delete, :edit, :update]
 ```
 
 * Nothing is happening in the `records#create` controller as of yet so we need to actually create a new record there. In order to do that we must pull out the data submitted from our form from the `params` object and create a new record with it.
