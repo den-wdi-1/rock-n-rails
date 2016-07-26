@@ -320,7 +320,13 @@ Commit again!
 
 * Let's add our fourth RESTful route for our `Records` resource!
 
-In `config/routes.rb`, add the following route(s):
+In `config/routes.rb`, replace  
+
+```ruby
+  resources :records, only: [:index, :new, :show]
+```
+
+with the following route(s):
 
 ```ruby
   resources :records, expect: [:delete, :edit, :update]
